@@ -11,7 +11,7 @@
   $hsl: $hue;
 
   @if ($saturation and $lightness) {
-    @if math.unitless($hue) {
+    @if math.is-unitless($hue) {
       $hue: $hue * 1deg;
     }
     @if math.unit($saturation) == "%" {
